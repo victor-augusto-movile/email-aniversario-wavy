@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cartão de aniversário</title>
+</head>
+
+<script src="https://use.typekit.net/vgm6kkx.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<script>
+
+	function validateForm() {
+		// document.getElementById("aniversariante").focus();
+		var a = document.getElementById("aniversariante").value;
+		var b = document.getElementById("mensagem").value;
+		var c = document.getElementById("despedida").value;
+		if (a == "") {
+			alert("Preencha o campo de aniversariante");
+			document.getElementById("aniversariante").focus();
+			return false;
+		} else if (b == "") {
+			alert("Preencha o campo de mensagem");
+			document.getElementById("mensagem").focus();
+			return false;
+		} else if (c == "") {
+			alert("Preencha o campo de despedida");
+			document.getElementById("despedida").focus();
+			return false;
+		} else {
+			document.getElementById("form").submit();
+		}
+	}
+	
+</script>
+
+<style>
+html, body {padding:0; margin:0;}
+
+body {
+	background: #fff;
+	font-family: "adelle-sans";
+	text-align: center;
+	font-weight: 300;
+}
+
+h1 {color: #ff0090; font-weight: 700;}
+
+div {width: 96%; max-width:600px; padding: 2%; margin: auto;}
+
+input, textarea {
+	border: none;
+	padding: 10px;
+	margin-top: 20px;
+	background: none;
+	font-size: 14px;
+	color: #314E55;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+.input_text {width: 98%; border-bottom:1px solid #ccc; height: 30px; outline: none}
+
+.input_submit {margin: auto; margin-top:20px; padding: 20px 20px 40px 20px; height: 50px; font-weight: 700; background: #ff0090; color:#fff;}
+
+textarea {width: 98%; border-bottom:1px solid #ccc; height: 50px; outline: none;}
+
+::-webkit-input-placeholder {color: #bbb; font-size: 16px;}
+:-moz-placeholder { color: #bbb; font-size: 16px;}
+::-moz-placeholder { color: #bbb; font-size: 16px;}
+:-ms-input-placeholder {color: #bbb; font-size: 16px}
+
+select {width: auto; margin: auto; height: 50px; border: none; outline: none; font-size: 16px; color: #314E55; margin-top:20px}
+
+</style>
+
+<body>
+
+<div>
+
+<h1>Cartão de aniversário <br> Birthday card</h1>
+
+<form action="criar.php" onsubmit="return validateForm()" id="form" method="post" name="form">
+
+<input class="input_text" maxlength="25" type="text" name="aniversariante" id="aniversariante" placeholder="João da Silva / John Smith">
+
+<br>
+
+<textarea name="motivo" maxlength="300" placeholder="Te desejo tudo de bom! / I wish you all the best!" id="mensagem">
+</textarea>
+
+<br>
+
+<input class="input_text" maxlength="50" type="text" name="despedida" id="despedida" placeholder="Um abraço da sua equipe. / Love, your team">
+
+<br>
+
+<input class="input_submit" type="submit" value="Criar cartão / Create card">
+
+</form>
+
+</div>
+
+</body>
+</html>

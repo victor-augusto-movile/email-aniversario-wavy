@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cartão de aniversário</title>
+	</head>
+
+	<script src="https://use.typekit.net/vgm6kkx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<style>
+		html, body {padding:0; margin:0;}
+
+		body {
+			background: #fff;
+			font-family: "adelle-sans";
+			text-align: center;
+			font-weight: 300;
+		}
+
+		h1 {color: #6454E0; font-weight: 700;}
+
+		a {
+			background: #6454E0;
+		    color: white;
+		    padding: 15px 25px;
+		    text-decoration: none;
+		    font-weight: bold;
+		    margin-top: 800px;
+		    position: absolute;
+		    left: 50%;
+		    transform: translateX(-50%);
+		}
+
+		.cartao {
+			position: absolute;
+			margin: 0 auto;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		img {
+			display: block;
+		    position: absolute;
+		    z-index: -1;
+		    width: 300px;
+		    padding: 30px;
+		    left: 50%;
+		    transform: translateX(-50%);
+		}
+
+		.editable {
+			border: 1px dashed red;
+		}
+
+		h3 {
+			color: #6454E0;
+			font-size: 24pt;
+			margin-top: 310px;
+		}
+
+		p {
+			width: 113mm;
+		    height: auto;
+		    line-height: 1.5;
+		    text-align: left;
+		    margin: 0 auto;
+		    font-size: 14pt;
+		}
+
+		.despedida {
+			width: 113mm;
+			height: auto;
+			font-size: 14pt;
+			text-align: center;
+			margin: 120px auto 0px;
+			display: block;
+		}
+
+		.despedida span {
+			font-size: 14pt;
+			text-align: center;
+			display: block;
+		}
+
+		@media print {
+			h1, h2, a {
+				display: none;
+			}
+
+			.editable {
+				border: none;
+				padding: 0;
+			}
+		}
+
+	</style>
+
+	<body>
+
+		<h2>Clique para editar / Click to edit</h2>
+
+		<a href="javascript:" onclick="window.print()">Imprimir / Print</a>
+
+		<div class="cartao">
+
+			<img src="cartao-equipe_v2.gif" alt="">
+			<br>
+			<h3>Parabéns, <span contenteditable="true" class="editable">Moviliano</span></h3>
+			<p class="editable" contenteditable="true">
+				Parabéns! Que o seu dia seja tão lindo quanto o seu sorriso e lhe ofereça tanta felicidade quanto a sua amizade envia para a minha vida. Que esta nova etapa chegue recheada de muita saúde e novas oportunidades para concretizar os seus sonhos mais desejados.
+			</p>
+			<img src="emojis.png" alt="">
+			<div class="despedida">
+				<span contenteditable="true" class="editable">
+					Um abraço da sua Equipe!
+				</span>
+				<span contenteditable="true" class="editable">
+					Movile, 5 de Novembro de 2016
+				</span>
+			</div>
+
+		</div>
+
+	</body>
+</html>
